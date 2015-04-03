@@ -1,5 +1,7 @@
 # maximator
 
+Fork of [com.oscaro/maximator](https://github.com/oscaro/maximator).
+
 Thin Clojure wrapper around [MaxMind GeoIP2](http://dev.maxmind.com/geoip/#GeoIP2) for IP geolocalization.
 
 ## Installation
