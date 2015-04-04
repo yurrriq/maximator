@@ -60,5 +60,5 @@
   "Looks up an IP given as a String in the given locator and
   returns a map with results."
   [^GeoIp2Provider db ip]
-  (if-let [city (.city db (InetAddress/getByName ip))]
+  (when-let [city (.city db (InetAddress/getByName ip))]
     (g/translate translator city {:lazy? false})))
