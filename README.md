@@ -17,8 +17,8 @@ Thin Clojure wrapper around [MaxMind GeoIP2](http://dev.maxmind.com/geoip/#GeoIP
 First you need to download one of MaxMind GeoIP2 databases. You can find the free Geolite2 City [here](http://dev.maxmind.com/geoip/geoip2/geolite2/).
 
 ```clojure
-(use 'com.oscaro.maximator)
-(use 'clojure.java.io)
+(require '[clojure.java.io :refer [input-stream resource]])
+(require '[me.ericb.maximator :refer [lookup make-locator]])
 
 ;; you can load db from a path easily
 ;; there are a couple of options to select default language and file-mode, see docstring
