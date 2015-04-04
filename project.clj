@@ -1,4 +1,4 @@
-(defproject me.ericb/maximator "0.2.0"
+(defproject me.ericb/maximator "0.2.1"
   :description "Thin Clojure wrapper around MaxMind GeoIP2 for IP geolocalization"
   :url "https://github.com/yurrriq/maximator"
   :license {:name "Eclipse Public License"
@@ -14,6 +14,6 @@
                  [gavagai "0.3.2"]]
 
   :plugins [[codox "0.8.10"]]
-  :codox {:src-dir-uri "https://github.com/yurrriq/maximator/blob/develop/"
+  :codox {:src-dir-uri "https://github.com/yurrriq/maximator/blob/master/"
           :src-linenum-anchor-prefix "L"
           :defaults {:doc/format :markdown}})

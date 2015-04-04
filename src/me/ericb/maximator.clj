@@ -46,9 +46,12 @@
 (defn make-locator
   "Returns a locator from either a String file path, a File object
   or an InputStream. This locator is threadsafe. Takes two optional arguments:
-  + **:locales** List of recognised locales, for example [:en :fr],
-                 used for default :name
-  + **:file-mode** Either *:memory-mapped* (default) or *:memory*"
+
+  ```language-clojure
+  {:locales   [:en]              ; List of recognised locales for default :name.
+   :file-mode (or :memory-mapped ; default
+                  :memory)}
+  ```"
   [f & {:keys [locales file-mode] :or {locales [:en]}}]
   (let [arg (if (instance? java.io.InputStream f) f (io/file f))]
     (-> (DatabaseReader$Builder. arg)
