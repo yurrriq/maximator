@@ -1,4 +1,4 @@
-(defproject me.ericb/maximator "0.2.1"
+(defproject me.ericb/maximator "0.2.2"
   :description "Thin Clojure wrapper around MaxMind GeoIP2 for IP geolocalization"
   :url "https://github.com/yurrriq/maximator"
   :license {:name "Eclipse Public License"
@@ -8,8 +8,9 @@
                              :snapshots true
                              :releases true
                              :signing {:gpg-key "eric@ericb.me"}}]]
-  
+
   :dependencies [[org.clojure/clojure "1.6.0"]
+                 [com.fasterxml.jackson.core/jackson-annotations "2.5.2"]
                  [com.maxmind.geoip2/geoip2 "2.1.0"]
                  [gavagai "0.3.2"]]
 
